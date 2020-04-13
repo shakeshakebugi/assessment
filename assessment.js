@@ -14,12 +14,13 @@ const tweetDivided = document.getElementById('tweet-area');
     element.removeChild(element.firstChild);
  }
  }
- 
- assessmentButton.onclick = () => {
+
+assessmentButton.onclick = () => {
     const userName = userNameInput.value;
 if (userName.length === 0) { //名前が空の時は処理を終了する
 return;
 }
+
 
 
     //TODO 診断結果表示エリアの作成
@@ -45,6 +46,7 @@ anchor.setAttribute('href',hrefValue);
 anchor.className = 'twitter-hashtag-button';
 anchor.setAttribute('data-text',result);
 anchor.innerText = 'Tweet #あなたのいいところ';
+
 tweetDivided.appendChild(anchor);
 
 //widgets.jsの設定
@@ -52,6 +54,8 @@ const script = document.createElement('script');
 script.setAttribute('src','https://platform.twitter.com/widgets.js');
 tweetDivided.appendChild(script);
 };
+
+
 
 const answers = [
     '{userName}のいいところは声です。{userName}の特徴的な声は皆を惹きつけ、心に残ります。',
@@ -70,12 +74,10 @@ const answers = [
     '{userName}のいいところは気配りです。{userName}の配慮が多くの人を救っています。',
     '{userName}のいいところはその全てです。ありのままの{userName}自身がいい所です。',
     '{userName}のいいところは自制心です。やばいと思った時にしっかりと衝動を抑えられる{userName}が皆から評価されています。',
-    '{userName}のいいところは優しさです。{userName}の優しい雰囲気や立ち振る舞いに多くの人が癒されています。'
-    ];
-    
+    '{userName}のいいところはやさしさです。{userName}の優しい雰囲気や立ち振る舞いに多くの人が癒されています。'
+];
 
-
-     userNameInput.onkeydown = (event) => {
+    userNameInput.onkeydown = (event) => {
         if (event.key === 'Enter') {
             assessmentButton.onclick();
         }
