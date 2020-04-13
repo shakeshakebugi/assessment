@@ -70,9 +70,10 @@ const answers = [
     '{userName}のいいところは気配りです。{userName}の配慮が多くの人を救っています。',
     '{userName}のいいところはその全てです。ありのままの{userName}自身がいい所です。',
     '{userName}のいいところは自制心です。やばいと思った時にしっかりと衝動を抑えられる{userName}が皆から評価されています。',
-    '{UserName}のいいところは優しさです。｛UserName}の優しい雰囲気や立ち振る舞いに多くの人が癒されています。'
+    '{userName}のいいところは優しさです。｛userName}の優しい雰囲気や立ち振る舞いに多くの人が癒されています。'
     ];
     
+
 
      userNameInput.onkeydown = (event) => {
         if (event.key === 'Enter') {
